@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>LaquaiLib.Threading.CronTimer</RootNamespace>
+
+    <Deterministic>True</Deterministic>
+
+    <LangVersion>latest</LangVersion>
+    <RollForward>LatestMajor</RollForward>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>True</IncludeSymbols>
+    <Version>$(CoreVersion)</Version>
+
+    <PackageId>$(AssemblyName)</PackageId>
+    <PackageVersion>$(Version)</PackageVersion>
+    <PackageDescription>A `PeriodicTimer`-like timer driven by one or more cron expressions instead of a fixed interval. Backed by Hangfire's `Cronos` for ultra-fast, lightweight cron parsing.</PackageDescription>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>jolaquai</Authors>
+
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jolaquai/LaquaiLib.Threading.CronThreadingPrimitives</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <ProjectReference Include="..\LaquaiLib.Threading.CronThreadingPrimitives.Internal\LaquaiLib.Threading.CronThreadingPrimitives.Internal.csproj" />
+
+      <Using Include="Cronos" />
+
+      <None Include="..\LICENSE;README.md" Pack="True" PackagePath="/" />
+
+      <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+  </ItemGroup>
+
+</Project>

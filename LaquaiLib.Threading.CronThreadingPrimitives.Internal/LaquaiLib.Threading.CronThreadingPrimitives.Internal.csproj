@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>LaquaiLib.Threading.CronThreadingPrimitives.Internal</RootNamespace>
+
+    <LangVersion>latest</LangVersion>
+    <RollForward>LatestMajor</RollForward>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>True</IncludeSymbols>
+    <Version>$(CoreVersion)</Version>
+
+    <PackageId>$(AssemblyName)</PackageId>
+    <PackageVersion>$(Version)</PackageVersion>
+    <PackageDescription>Internal helpers for the separate assemblies in LaquaiLib.Threading.CronThreadingPrimitives. Not intended for direct use.</PackageDescription>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>jolaquai</Authors>
+
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jolaquai/LaquaiLib.Threading.CronThreadingPrimitives</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Cronos" Version="0.11.1" />
+
+      <Using Include="Cronos" />
+
+      <None Include="..\LICENSE;README.md" Pack="True" PackagePath="/" />
+
+      <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+      <InternalsVisibleTo Include="LaquaiLib.Threading.CronTimer"/>
+  </ItemGroup>
+
+</Project>
