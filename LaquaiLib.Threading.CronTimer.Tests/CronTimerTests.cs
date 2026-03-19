@@ -156,7 +156,7 @@ public sealed class CronTimerTests
         using var timer = new CronTimer(EverySecond);
         // Let at least one tick fire while nobody is waiting
         await Task.Delay(2000);
-        var vt = timer.WaitForNextTickAsync();
+        var vt = timer.WaitForNextTickAsync(TestContext.Current.CancellationToken);
         Assert.True(vt.IsCompletedSuccessfully);
         Assert.True(vt.Result);
     }

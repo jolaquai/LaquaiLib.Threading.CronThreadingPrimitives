@@ -8,6 +8,7 @@
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <NoWarn>$(NoWarn);CA2007</NoWarn>
 
     <RootNamespace>LaquaiLib.Threading.CronTimer</RootNamespace>
   </PropertyGroup>
