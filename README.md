@@ -14,11 +14,9 @@ Shared internal helpers. Not intended for direct use.
 
 ## Contributing
 
-Opening issues and submitting PRs are welcome. All changes must be appropriately covered by tests. Tests run exclusively under `net6.0`.
+Opening issues and submitting PRs are welcome. All changes must be appropriately covered by tests. Tests run exclusively under `net10.0`.
 
-Support for `netstandard2.0` must always be maintained in the internal project. If possible, new functionality should target all frameworks. New dependencies may be introduced after I vet the decision to do so.
-
-Or get in touch on Discord @eyeoftheenemy
+Or get in touch on Discord `@eyeoftheenemy`
 
 ## License
 
