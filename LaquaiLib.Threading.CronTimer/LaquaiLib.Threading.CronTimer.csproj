@@ -10,8 +10,6 @@
   <PropertyGroup>
     <RootNamespace>LaquaiLib.Threading.CronTimer</RootNamespace>
 
-    <Deterministic>True</Deterministic>
-
     <LangVersion>latest</LangVersion>
     <RollForward>LatestMajor</RollForward>
     <DebugType>portable</DebugType>
