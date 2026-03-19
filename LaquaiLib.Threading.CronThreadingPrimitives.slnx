@@ -5,6 +5,7 @@
     <File Path="Directory.Build.props" />
     <File Path="LICENSE" />
     <File Path="README.md" />
+    <File Path="push-nuget.ps1" />
   </Folder>
   <Project Path="LaquaiLib.Threading.CronThreadingPrimitives.Internal/LaquaiLib.Threading.CronThreadingPrimitives.Internal.csproj" Id="33d20f42-e66d-41a3-a850-76e13a2c92c3" />
   <Project Path="LaquaiLib.Threading.CronTimer.Tests/LaquaiLib.Threading.CronTimer.Tests.csproj" />
